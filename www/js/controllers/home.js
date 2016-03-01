@@ -4,6 +4,7 @@ angular.module('AppHour')
 
 .controller('HomeCtrl', function($scope, $state, $ionicLoading, $http, $cordovaSQLite, $rootScope, $cordovaSocialSharing, DB_local, web_services) {
       
+      
   $scope.doRefresh = function() {
       $rootScope.bares = null;
       navigator.geolocation.getCurrentPosition(function(pos) {
