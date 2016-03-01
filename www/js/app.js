@@ -1,6 +1,6 @@
 'use strict';
 
-var db = null;
+//var db = null;
 
 
 angular.module('AppHour', ['ionic', 'ngCordova'])

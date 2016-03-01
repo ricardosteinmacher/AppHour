@@ -102,7 +102,7 @@ angular.module('AppHour')
 //    db = $cordovaSQLite.openDB("my.db");
 
 return {
-//    saveHome: function() {
+    saveHome: function() {
 //        var bares_unq = [];
 //        $cordovaSQLite.execute(db, "DELETE FROM estilo")
 //            .then(function(res) {
@@ -180,7 +180,7 @@ return {
 //                console.error(err);
 //            })
 //            
-//    },
+//    }
     getBares: function(lat, long) {
         //Pega todos os estilos gravados no banco SEM REPETIÇÕES
 //        var query = "SELECT DISTINCT est_cod, est_nome FROM estilo";
