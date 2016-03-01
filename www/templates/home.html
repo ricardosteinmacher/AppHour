@@ -1,0 +1,34 @@
+<ion-view view-title="Home" class="home" ng-init="doRefresh()">
+    <ion-nav-buttons side="right">
+      <button class="button" ui-sref="app.maps">
+        Mapa
+      </button>
+    </ion-nav-buttons>
+    
+    
+  <ion-content>
+    <ion-refresher
+        pulling-text="Puxe para atualizar..."
+        on-refresh="doRefresh()">
+    </ion-refresher>
+
+        <button class="button button-block" ui-sref="app.details">Bar 1</button>
+      
+        <button class="button button-block" ui-sref="app.details">Bar 2</button>
+      
+        <button class="button button-block" ng-click="testWS()">Teste WS</button>
+      
+        <button class="button button-block" ng-click="testDB()">Teste DB</button>
+      
+        <button class="button button-block" ng-click="test()">Teste Outro</button>
+      
+        <button class="button button-block" ng-click="whatsApp()">Teste Share Whatsapp</button>
+      
+        <button class="button button-block" ng-click="facebook()">Teste Share Facebook</button>
+      
+        <button class="button button-block" ng-click="twitter()">Teste Share Twitter</button>
+      
+<!--    teste de commit-->
+      
+  </ion-content>
+</ion-view>

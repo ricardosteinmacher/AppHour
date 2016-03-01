@@ -1,0 +1,16 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/ricardosteinmacher/Dropbox/AppHour/AppHour_0.05/www/js/controllers/home.js",
+        "/Users/ricardosteinmacher/Dropbox/AppHour/AppHour_0.05/www/js/controllers.js",
+        "/Users/ricardosteinmacher/Dropbox/AppHour/AppHour_0.05/www/js/ng-cordova.min.js",
+        "/Users/ricardosteinmacher/Dropbox/AppHour/AppHour_0.06/www/js/services/google.js",
+        "/Users/ricardosteinmacher/Dropbox/AppHour/AppHour_0.06/www/js/controllers/details.js",
+        "/Users/ricardosteinmacher/Dropbox/AppHour/AppHour_0.06/www/js/controllers/maps.js",
+        "/Users/ricardosteinmacher/Dropbox/AppHour/AppHour_0.07/www/js/controllers/home.js",
+        "/Users/ricardosteinmacher/Dropbox/AppHour/AppHour_0.07/www/js/services/social_services.js",
+        "/Users/ricardosteinmacher/Dropbox/AppHour/AppHour_0.07/www/js/controllers/app.js",
+        "/Users/ricardosteinmacher/Dropbox/AppHour/AppHour_0.07/www/js/app.js",
+        "/Users/ricardosteinmacher/Dropbox/AppHour/AppHour_0.08/www/js/services/social_services.js",
+        "/Users/ricardosteinmacher/Dropbox/AppHour/AppHour_0.08/www/js/app.js"
+    ]
+}
