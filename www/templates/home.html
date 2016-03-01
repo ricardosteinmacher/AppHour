@@ -4,36 +4,105 @@
         Mapa
       </button>
     </ion-nav-buttons>
+
+<ion-content class="has-header">
     
-    <div>
 <ion-slide-box id="slidertop">
 
-   <ion-slide>
-      <div class = "box box1"  ng-click = "nextSlide()">
-         <h1>Box 1</h1>
+   <ion-slide class="slidewidth">
+      <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box1">
       </div>
    </ion-slide>
 
    <ion-slide>
-      <div class = "box box2">
-         <h1>Box 22</h1>
+      <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box2">
       </div>
    </ion-slide>
 
    <ion-slide>
-      <div class = "box box3">
-         <h1>Box 3</h1>
+      <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box3">
       </div>
    </ion-slide>
 
 </ion-slide-box>
-    </div>
+    
+    
+    
+<ion-scroll direction="x" overflow-scroll="true" scrollbar-x="true" scrollbar-y="true">
+           <ul class="long-container">
+               
+<button style="background-image: url(img/rest-5.jpg);" class="child-item button" ui-sref="app.details">teste</button>
+               
+               <button style="background-image: url(img/rest-5.jpg);" class="child-item button" ng-click="openDetails()">teste</button>
+               <div style="background-image: url(img/rest-4.jpg);" class="child-item button" ui-sref="playlist">scroll0</div>
+               <div style="background-image: url(img/rest-5.jpg);" class="child-item button" ui-sref="welcome">scroll0</div>
+               <div style="background-image: url(img/rest-6.jpg);" class="child-item button" ui-sref="welcome">scroll0</div>
+               <div style="background-image: url(img/rest-7.jpg);" class="child-item button" ui-sref="welcome">scroll0</div>
+               <div style="background-image: url(img/rest-4.jpg);" class="child-item button" ui-sref="welcome">scroll0</div>
+               <div style="background-image: url(img/rest-5.jpg);" class="child-item button" ui-sref="welcome">scroll0</div>
+               <div style="background-image: url(img/rest-6.jpg);" class="child-item button" ui-sref="welcome">scroll0</div>
+               <div style="background-image: url(img/rest-7.jpg);" class="child-item button" ui-sref="welcome">scroll0</div>
+           </ul>
+       </ion-scroll>
+    
+    
+    
+<!--
+    
+    <ion-slide-box id="slidertop">
+
+   <ion-slide>
+      <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box1">
+      </div>
+   </ion-slide>
+
+   <ion-slide>
+      <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box2">
+      </div>
+   </ion-slide>
+
+   <ion-slide>
+      <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box3">
+      </div>
+   </ion-slide>
+
+</ion-slide-box>
+-->
+    
+    
+
     
 <style type="text/css">
-    .box1, .box2, .box3 {
-   height: 300px;
-   border: 2px solid blue;
+    
+.box1, .box2, .box3 {
+   height: 160px;
 }
+    
+.child-item {
+       width: 90px;
+       height: 90px;
+       margin: 4px;
+       margin-top: 5px;
+       background-color: red;
+       float: left;
+       margin-left: 2px;
+       font-size: 14px;
+       color: white;
+       border-bottom: solid 22px black;
+       text-align: left;
+       padding-top: 56px;
+       padding-left: 5px;}
+    
+
+.long-container {
+       width: 770px;
+       height: 100px;
+       overflow:hidden; }
+    
+.ng-animate .scroll-bar {
+  visibility: hidden;
+}
+
 </style>
       
   </ion-content>

@@ -6726,8 +6726,7 @@ button.item.item-button-right {
 .slider {
   position: relative;
   visibility: hidden;
-  overflow: hidden;
-  margin-top: 44px;}
+  overflow: hidden;}
 
 .slider-slides {
   position: relative;
