@@ -2,8 +2,11 @@
 
 angular.module('AppHour')
 
-.controller('HomeCtrl', function($scope, $state, $ionicLoading, $http, $cordovaSQLite, $rootScope, $cordovaSocialSharing, DB_local, web_services) {
-      
+.controller('HomeCtrl', function($scope, $state, $ionicLoading, $http, $cordovaSQLite, $rootScope, $cordovaSocialSharing, $ionicSlideBoxDelegate, DB_local, web_services) {
+    
+  $scope.nextSlide = function() {
+      $ionicSlideBoxDelegate.next();
+   }
       
   $scope.doRefresh = function() {
       $rootScope.bares = null;

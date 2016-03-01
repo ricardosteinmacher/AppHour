@@ -6726,7 +6726,8 @@ button.item.item-button-right {
 .slider {
   position: relative;
   visibility: hidden;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 44px;}
 
 .slider-slides {
   position: relative;
@@ -6749,7 +6750,8 @@ button.item.item-button-right {
   z-index: 1;
   width: 100%;
   height: 15px;
-  text-align: center; }
+  text-align: center;
+display:none;}
   .slider-pager .slider-pager-page {
     display: inline-block;
     margin: 0px 3px;

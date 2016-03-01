@@ -5,20 +5,36 @@
       </button>
     </ion-nav-buttons>
     
+    <div>
+<ion-slide-box id="slidertop">
+
+   <ion-slide>
+      <div class = "box box1"  ng-click = "nextSlide()">
+         <h1>Box 1</h1>
+      </div>
+   </ion-slide>
+
+   <ion-slide>
+      <div class = "box box2">
+         <h1>Box 22</h1>
+      </div>
+   </ion-slide>
+
+   <ion-slide>
+      <div class = "box box3">
+         <h1>Box 3</h1>
+      </div>
+   </ion-slide>
+
+</ion-slide-box>
+    </div>
     
-  <ion-content>
-    <ion-refresher
-        pulling-text="Puxe para atualizar..."
-        on-refresh="doRefresh()">
-    </ion-refresher>
-      
-<div id="owl-demo" class="owl-carousel owl-theme">
- 
-  <div class="item"><img src="assets/fullimage1.jpg" alt="The Last of us"></div>
-  <div class="item"><img src="assets/fullimage2.jpg" alt="GTA V"></div>
-  <div class="item"><img src="assets/fullimage3.jpg" alt="Mirror Edge"></div>
- 
-</div>
+<style type="text/css">
+    .box1, .box2, .box3 {
+   height: 300px;
+   border: 2px solid blue;
+}
+</style>
       
   </ion-content>
 </ion-view>
