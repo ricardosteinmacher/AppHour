@@ -6,103 +6,185 @@
     </ion-nav-buttons>
 
 <ion-content class="has-header">
-    
-<ion-slide-box id="slidertop">
-
-   <ion-slide class="slidewidth">
-      <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box1">
-      </div>
-   </ion-slide>
-
-   <ion-slide>
-      <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box2">
-      </div>
-   </ion-slide>
-
-   <ion-slide>
-      <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box3">
-      </div>
-   </ion-slide>
-
-</ion-slide-box>
-    
-    
-    
-<ion-scroll direction="x" overflow-scroll="true" scrollbar-x="true" scrollbar-y="true">
-           <ul class="long-container">
-               
-<button style="background-image: url(img/rest-5.jpg);" class="child-item button" ui-sref="app.details">teste</button>
-               
-               <button style="background-image: url(img/rest-5.jpg);" class="child-item button" ng-click="openDetails()">teste</button>
-               <div style="background-image: url(img/rest-4.jpg);" class="child-item button" ui-sref="playlist">scroll0</div>
-               <div style="background-image: url(img/rest-5.jpg);" class="child-item button" ui-sref="welcome">scroll0</div>
-               <div style="background-image: url(img/rest-6.jpg);" class="child-item button" ui-sref="welcome">scroll0</div>
-               <div style="background-image: url(img/rest-7.jpg);" class="child-item button" ui-sref="welcome">scroll0</div>
-               <div style="background-image: url(img/rest-4.jpg);" class="child-item button" ui-sref="welcome">scroll0</div>
-               <div style="background-image: url(img/rest-5.jpg);" class="child-item button" ui-sref="welcome">scroll0</div>
-               <div style="background-image: url(img/rest-6.jpg);" class="child-item button" ui-sref="welcome">scroll0</div>
-               <div style="background-image: url(img/rest-7.jpg);" class="child-item button" ui-sref="welcome">scroll0</div>
-           </ul>
-       </ion-scroll>
-    
-    
-    
-<!--
+    <ion-refresher
+        pulling-text="Puxe para atualizar..."
+        on-refresh="doRefresh()">
+    </ion-refresher>
     
     <ion-slide-box id="slidertop">
+       <ion-slide class="slidewidth">
+          <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box1">
+          </div>
+       </ion-slide>
 
-   <ion-slide>
-      <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box1">
-      </div>
-   </ion-slide>
+       <ion-slide>
+          <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box2">
+          </div>
+       </ion-slide>
 
-   <ion-slide>
-      <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box2">
-      </div>
-   </ion-slide>
-
-   <ion-slide>
-      <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box3">
-      </div>
-   </ion-slide>
-
-</ion-slide-box>
+       <ion-slide>
+          <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box3">
+          </div>
+       </ion-slide>
+    </ion-slide-box>
+    
+    <div id = "content-div">
+        
+        <div class="cell">
+            <label class="cell-title">Para comer algo:</label>
+            <ion-scroll direction="x" class="cell-scroll">
+                <a class="button cell-scroll-btn">Zapata</a>
+                <a class="button cell-scroll-btn">Woods</a>
+                <a class="button cell-scroll-btn">+55</a>
+                <a class="button cell-scroll-btn">Bar Zinho</a>
+                <a class="button cell-scroll-btn">button</a>
+                <a class="button cell-scroll-btn">button</a>
+                <a class="button cell-scroll-btn">button</a>
+                <a class="button cell-scroll-btn">button</a>
+            </ion-scroll>
+        </div>
+        
+        <div class="cell">
+            <label class="cell-title">Para comer algo:</label>
+            <ion-scroll direction="x" class="cell-scroll">
+                <a class="button cell-scroll-btn">Zapata</a>
+                <a class="button cell-scroll-btn">Woods</a>
+                <a class="button cell-scroll-btn">+55</a>
+                <a class="button cell-scroll-btn">Bar Zinho</a>
+                <a class="button cell-scroll-btn">button</a>
+                <a class="button cell-scroll-btn">button</a>
+                <a class="button cell-scroll-btn">button</a>
+                <a class="button cell-scroll-btn">button</a>
+            </ion-scroll>
+        </div>
+        
+        <div class="cell">
+            <label class="cell-title">Para comer algo:</label>
+            <ion-scroll direction="x" class="cell-scroll">
+                <a class="button cell-scroll-btn">Zapata</a>
+                <a class="button cell-scroll-btn">Woods</a>
+                <a class="button cell-scroll-btn">+55</a>
+                <a class="button cell-scroll-btn">Bar Zinho</a>
+                <a class="button cell-scroll-btn">button</a>
+                <a class="button cell-scroll-btn">button</a>
+                <a class="button cell-scroll-btn">button</a>
+                <a class="button cell-scroll-btn">button</a>
+            </ion-scroll>
+        </div>
+        
+        <div class="cell">
+            <label class="cell-title">Para comer algo:</label>
+            <ion-scroll direction="x" class="cell-scroll">
+                <a class="button cell-scroll-btn">Zapata</a>
+                <a class="button cell-scroll-btn">Woods</a>
+                <a class="button cell-scroll-btn">+55</a>
+                <a class="button cell-scroll-btn">Bar Zinho</a>
+                <a class="button cell-scroll-btn">button</a>
+                <a class="button cell-scroll-btn">button</a>
+                <a class="button cell-scroll-btn">button</a>
+                <a class="button cell-scroll-btn">button</a>
+            </ion-scroll>
+        </div>
+        
+    </div>
+<!--
+        
+        Para beber:
+        <ion-scroll direction="x" class="wide-as-needed">
+            
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button </a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            
+        </ion-scroll>
+        Para galera do rock:
+        <ion-scroll direction="x" class="wide-as-needed">
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+        </ion-scroll>
+        Para sair com a gata:
+        <ion-scroll direction="x" class="wide-as-needed">
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+        </ion-scroll>
+        Baladas:
+        <ion-scroll direction="x" class="wide-as-needed">
+            
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a>
+            <a class="button child-item">button</a> 
+        </ion-scroll>
 -->
     
     
-
+    
+    
     
 <style type="text/css">
-    
-.box1, .box2, .box3 {
-   height: 160px;
-}
-    
-.child-item {
-       width: 90px;
-       height: 90px;
-       margin: 4px;
-       margin-top: 5px;
-       background-color: red;
-       float: left;
-       margin-left: 2px;
-       font-size: 14px;
-       color: white;
-       border-bottom: solid 22px black;
-       text-align: left;
-       padding-top: 56px;
-       padding-left: 5px;}
-    
+/*
+.scroll { 
+    min-width: 100%;
+}    
+*/
 
-.long-container {
-       width: 770px;
-       height: 100px;
-       overflow:hidden; }
+    .box1, .box2, .box3 {
+        height: 130px;
+    }
     
-.ng-animate .scroll-bar {
-  visibility: hidden;
-}
-
+    .cell {
+        width: 100%;
+        height: 135px;
+        border-bottom: 1px solid #E6E6E6;
+    }
+    .cell-title {
+        margin-top: 10px;
+        margin-left: 9px;
+        display: inline-block;
+        color: #CC3319;
+    }
+    .cell-scroll {
+        overflow: scroll;
+        white-space: nowrap;
+        margin-top: 10px;
+    }
+    .cell-scroll-btn {
+        width: 80px;
+        height: 80px;
+        background-color: #E6E6E6;
+        margin-left: 5px;
+        text-align: left;
+    }
+    
+    .long-container {
+        width: 770px;
+        height: 100px;
+        overflow:hidden; }
+    
+    .ng-animate .scroll-bar {
+        visibility: hidden;
+    }
 </style>
       
   </ion-content>

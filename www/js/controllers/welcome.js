@@ -28,7 +28,7 @@ angular.module('AppHour')
       });
       $ionicLoading.hide();
       $state.go('app.home');
-    }, function(fail){
+    }, function(fail){ 
       // Fail get profile info
       console.log('profile info fail', fail);
     });

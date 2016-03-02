@@ -7,6 +7,7 @@ angular.module('AppHour', ['ionic', 'ngCordova'])
 
 .run(function($ionicPlatform, $cordovaSQLite, $rootScope) {
   $ionicPlatform.ready(function() {
+      //$cordovaStatusBar.style(1) //Light
 //    if (window.cordova && window.cordova.plugins.Keyboard) {
 //      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
 //      cordova.plugins.Keyboard.disableScroll(true);
@@ -14,7 +15,8 @@ angular.module('AppHour', ['ionic', 'ngCordova'])
 //    }
         if (window.StatusBar) {
             // org.apache.cordova.statusbar required
-            StatusBar.styleDefault();
+            // StatusBar.styleDefault();
+
         }
 
 //        //Criação do Banco de Dados local
