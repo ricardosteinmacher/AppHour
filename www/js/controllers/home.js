@@ -7,7 +7,6 @@ angular.module('AppHour')
     
     $scope.montarTela = function () {
 
-                console.log("oi");
         var target1 = document.getElementById("content-div");
         
 //        target_cell.innerHTML = '<label class="cell-title">Para comer algo:</label><ion-scroll direction="x" class="cell-scroll"><a class="button cell-scroll-btn">Zapata</a></ion-scroll>';
@@ -83,6 +82,14 @@ angular.module('AppHour')
     $scope.doRefresh = function() {
         $rootScope.bares = null;
         navigator.geolocation.getCurrentPosition(function(pos) {
+            $scope.cells = [
+                {title: 'Reggae', id: 1, bares:[{id:1},{id:1},{id:1},{id:1}]},
+                {title: 'Chill', id: 2, bares:[{id:2},{id:2},{id:2},{id:2}] },
+                { title: 'Dubstep', id: 3, bares:[{id:3},{id:3},{id:3},{id:3}] },
+                { title: 'Indie', id: 4, bares:[{id:1},{id:1},{id:1},{id:1}] },
+                { title: 'Rap', id: 5, bares:[{id:1},{id:1},{id:1},{id:1}] },
+                { title: 'Cowbell', id: 6, bares:[{id:1},{id:1},{id:1},{id:1}] }
+        ];
 //            if(navigator.connection.type == Connection.NONE) {
 //                window.alert("sem internet");
 //                DB_local.getBares(pos.coords.latitude, pos.coords.longitude).then(function(result) {
@@ -96,21 +103,17 @@ angular.module('AppHour')
 //                    $scope.$broadcast('scroll.refreshComplete');
 //                    console.log("montar tela");
             
-               //    var meuhtml = $scope.montarTela();
-               //     console.log(meuhtml);
-               //     var meuhtmlcompilado =  $compile(meuhtml)($scope);
-           // console.log(meuhtmlcompilado);
-           // console.log(meuhtmlcompilado[0].innerHTML);
+                   // var meuhtml = $scope.montarTela();
+                    //var meuhtmlcompilado =  $compile(meuhtml)($scope);
             
-           // $scope.myHTML = meuhtmlcompilado[0].innerHTML;
-            
-                    //element.appendChild(meuhtmlcompilado);
-               //     var target_temp = document.getElementById("content-div");
+                    //$scope.myHTML = meuhtmlcompilado[0].innerHTML;
+    
+                    //var target_temp = document.getElementById("content-div");
                     //target_temp.appendChild(meuhtml);
-               //     target_temp.innerHTML = meuhtml;
-               //     target_temp.style.display = "";
+                    //target_temp.innerHTML = meuhtmlcompilado[0].innerHTML;
 //                })
 //            }
+            $scope.$broadcast('scroll.refreshComplete');
       });
     }
 

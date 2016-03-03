@@ -18,7 +18,7 @@
     border-bottom: 1px solid #E6E6E6;
 }
 .cell-title {
-    margin-top: 10px;
+    margin-top: -1px;
     margin-left: 9px;
     display: inline-block;
     color: #CC3319;
