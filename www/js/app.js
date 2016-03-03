@@ -3,7 +3,7 @@
 //var db = null;
 
 
-angular.module('AppHour', ['ionic', 'ngCordova'])
+angular.module('AppHour', ['ionic', 'ngCordova','ngSanitize'])
 
 .run(function($ionicPlatform, $cordovaSQLite, $rootScope) {
   $ionicPlatform.ready(function() {

@@ -28,19 +28,16 @@
        </ion-slide>
     </ion-slide-box>
     
+<!--    <div id = "content-div" ng-bind-html="myHTML">-->
     <div id = "content-div">
-        
-        <div class="cell">
+        <div class="cell" id = "1">
             <label class="cell-title">Para comer algo:</label>
             <ion-scroll direction="x" class="cell-scroll">
-                <a class="button cell-scroll-btn">Zapata</a>
-                <a class="button cell-scroll-btn">Woods</a>
-                <a class="button cell-scroll-btn">+55</a>
-                <a class="button cell-scroll-btn">Bar Zinho</a>
-                <a class="button cell-scroll-btn">button</a>
-                <a class="button cell-scroll-btn">button</a>
-                <a class="button cell-scroll-btn">button</a>
-                <a class="button cell-scroll-btn">button</a>
+                <a class="button cell-scroll-btn" ui-sref="app.details">Zapata</a>
+                <a class="button cell-scroll-btn" ui-sref="app.details">Woods</a>
+                <a class="button cell-scroll-btn" ui-sref="app.details">+55</a>
+                <a class="button cell-scroll-btn" ui-sref="app.details">Woods</a>
+                <a class="button cell-scroll-btn" ui-sref="app.details">+55</a>
             </ion-scroll>
         </div>
         
@@ -87,100 +84,17 @@
         </div>
         
     </div>
-<!--
-        
-        Para beber:
-        <ion-scroll direction="x" class="wide-as-needed">
-            
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button </a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            
-        </ion-scroll>
-        Para galera do rock:
-        <ion-scroll direction="x" class="wide-as-needed">
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-        </ion-scroll>
-        Para sair com a gata:
-        <ion-scroll direction="x" class="wide-as-needed">
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-        </ion-scroll>
-        Baladas:
-        <ion-scroll direction="x" class="wide-as-needed">
-            
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a>
-            <a class="button child-item">button</a> 
-        </ion-scroll>
--->
-    
-    
-    
-    
     
 <style type="text/css">
-/*
 .scroll { 
     min-width: 100%;
 }    
-*/
 
     .box1, .box2, .box3 {
         height: 130px;
     }
     
-    .cell {
-        width: 100%;
-        height: 135px;
-        border-bottom: 1px solid #E6E6E6;
-    }
-    .cell-title {
-        margin-top: 10px;
-        margin-left: 9px;
-        display: inline-block;
-        color: #CC3319;
-    }
-    .cell-scroll {
-        overflow: scroll;
-        white-space: nowrap;
-        margin-top: 10px;
-    }
-    .cell-scroll-btn {
-        width: 80px;
-        height: 80px;
-        background-color: #E6E6E6;
-        margin-left: 5px;
-        text-align: left;
-    }
     
-    .long-container {
-        width: 770px;
-        height: 100px;
-        overflow:hidden; }
     
     .ng-animate .scroll-bar {
         visibility: hidden;

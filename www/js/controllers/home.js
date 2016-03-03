@@ -2,26 +2,78 @@
 
 angular.module('AppHour')
 
-.controller('HomeCtrl', function($scope, $state, $ionicLoading, $http, $cordovaSQLite, $rootScope, $cordovaSocialSharing, $ionicSlideBoxDelegate, DB_local, web_services) {
+.controller('HomeCtrl', function($scope, $state, $ionicLoading, $http, $cordovaSQLite, $rootScope, $cordovaSocialSharing, $ionicSlideBoxDelegate, DB_local, web_services, $compile) {
     
     
     $scope.montarTela = function () {
-        var target = document.getElementById("content-div");
-        console.log(target);
+
+                console.log("oi");
+        var target1 = document.getElementById("content-div");
         
-        var btn = document.createElement("input");
-        btn.type = "div";
+//        target_cell.innerHTML = '<label class="cell-title">Para comer algo:</label><ion-scroll direction="x" class="cell-scroll"><a class="button cell-scroll-btn">Zapata</a></ion-scroll>';
+//       
+         return '<div><div class="cell"><label class="cell-title">Para comer algo:</label><ion-scroll direction="x" class="cell-scroll"><a class="button cell-scroll-btn" ui-sref="app.details">Zapata</a><a class="button cell-scroll-btn" ui-sref="app.details">Zapata</a><a class="button cell-scroll-btn" ui-sref="app.details">Zapata</a><a class="button cell-scroll-btn" ui-sref="app.details">Zapata</a><a class="button cell-scroll-btn" ui-sref="app.details">Woods</a><a class="button cell-scroll-btn" ui-sref="app.details">+55</a></ion-scroll></div></div>';
         
-       // btn.style="background-image: url(img/rest-"+i+".jpg);";
-        btn.class="child-item button";
-        btn.value="button_'+i+'";
+//        return '<div><div class="cell"><label class="cell-title">Para comer algo:</label><ion-scroll direction="x" class="cell-scroll scroll-view ionic-scroll scroll-x"><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);"><a class="button cell-scroll-btn" ui-sref="app.details">Zapata</a><a class="button cell-scroll-btn" ui-sref="app.details">Zapata</a><a class="button cell-scroll-btn" ui-sref="app.details">Zapata</a><a class="button cell-scroll-btn" ui-sref="app.details">Zapata</a><a class="button cell-scroll-btn" ui-sref="app.details">Woods</a><a class="button cell-scroll-btn" ui-sref="app.details">+55</a></div></ion-scroll></div></div>';
         
-        btn.name = "button";
-        btn.value = "Click Me";
-        btn.id = "id";
-        btn.href = "app.details";
+//        
+//        var divi = document.createElement("div");
+//        divi.className = "cell";
+//        divi.id="divicell";
+//        target1.appendChild(divi);
+//        
+//        var target_cell = document.getElementById("divicell");
+//        var title = document.createElement("label");
+//        title.className = "cell-title";
+//        title.textContent = "Teste";
+//        target_cell.appendChild(title);
+//        
+//        var scroll = document.createElement("ion-scroll");
+//        scroll.className = "cell-scroll scroll-view ionic-scroll scroll-x";
+//        scroll.id = "scroll1";
+//        scroll.direction = "x";
+//        target_cell.appendChild(scroll);
+//        
+//        var target3 = document.getElementById("scroll1");
+//        
+//        var subscroll = document.createElement("div");
+//        subscroll.className = "scroll";
+//        subscroll.id = "testee";
+//        //subscroll.style = "transform: translate3d(-92px, 0px, 0px) scale(1);";
+//        target3.appendChild(subscroll);
+//        
+//        var target4 = document.getElementById("testee");
+//        
+//        var btn = document.createElement("a");
+//        btn.className = "button cell-scroll-btn";
+//        btn.text = "teste";
+//        target4.appendChild(btn);
+//        
+//        var btn1 = document.createElement("a");
+//        btn1.className = "button cell-scroll-btn";
+//        btn1.text = "teste";
+//        target4.appendChild(btn1);
+//        
+//        var btn2 = document.createElement("a");
+//        btn2.className = "button cell-scroll-btn";
+//        btn2.text = "teste";
+//        target4.appendChild(btn2);
+//        
+//        var btn3 = document.createElement("a");
+//        btn3.className = "button cell-scroll-btn";
+//        btn3.text = "teste";
+//        target4.appendChild(btn3);
+//        
+//        var btn4 = document.createElement("a");
+//        btn4.className = "button cell-scroll-btn";
+//        btn4.value = "teste";
+//        target4.appendChild(btn4);
+//        
+//        var btn5 = document.createElement("a");
+//        btn5.className = "button cell-scroll-btn";
+//        btn5.value = "teste";
+//        target4.appendChild(btn5);
         
-        target.appendChild(btn);
     }
     
     $scope.nextSlide = function() {
@@ -31,22 +83,34 @@ angular.module('AppHour')
     $scope.doRefresh = function() {
         $rootScope.bares = null;
         navigator.geolocation.getCurrentPosition(function(pos) {
+//            if(navigator.connection.type == Connection.NONE) {
+//                window.alert("sem internet");
+//                DB_local.getBares(pos.coords.latitude, pos.coords.longitude).then(function(result) {
+//                    $scope.$broadcast('scroll.refreshComplete');
+//                });
+//              }
+//            else {
+//                web_services.lista_bares(pos.coords.latitude, pos.coords.longitude).then(function(result) {
+//                    console.log("com internet");
+//                    DB_local.saveHome();
+//                    $scope.$broadcast('scroll.refreshComplete');
+//                    console.log("montar tela");
             
-            if(navigator.connection.type == Connection.NONE) {
-                window.alert("sem internet");
-                DB_local.getBares(pos.coords.latitude, pos.coords.longitude).then(function(result) {
-                    $scope.$broadcast('scroll.refreshComplete');
-                });
-              }
-            else {
-                web_services.lista_bares(pos.coords.latitude, pos.coords.longitude).then(function(result) {
-                    console.log("com internet");
-                    DB_local.saveHome();
-                    $scope.$broadcast('scroll.refreshComplete');
-                    console.log("montar tela");
-                    //$scope.montarTela();
-                })
-            }
+               //    var meuhtml = $scope.montarTela();
+               //     console.log(meuhtml);
+               //     var meuhtmlcompilado =  $compile(meuhtml)($scope);
+           // console.log(meuhtmlcompilado);
+           // console.log(meuhtmlcompilado[0].innerHTML);
+            
+           // $scope.myHTML = meuhtmlcompilado[0].innerHTML;
+            
+                    //element.appendChild(meuhtmlcompilado);
+               //     var target_temp = document.getElementById("content-div");
+                    //target_temp.appendChild(meuhtml);
+               //     target_temp.innerHTML = meuhtml;
+               //     target_temp.style.display = "";
+//                })
+//            }
       });
     }
 
