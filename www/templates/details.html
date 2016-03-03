@@ -1,5 +1,5 @@
 <ion-view view-title="Detalhes">
-  <ion-content>
+<ion-content>
       
  <div class="bannertop">
     
@@ -24,49 +24,119 @@
     </ion-slide-box>
 -->
       
-</div> 
+</div> </div> 
       
 <div class="tabss">
+    
     <ion-slide-box slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
-        <ion-slide ion-slide-tab-label="test"><h1>Tab 1</h1></ion-slide>
-        <ion-slide ion-slide-tab-label="secondTest"><h1>Tab 2</h1></ion-slide>
-        <ion-slide ion-slide-tab-label="<b>boldTest</b>"><h1>Tab 3 </h1>
         
-        <ion-tabs class="tabs-positive tabs-icon-top">
-         <ion-tab title="Info" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
-           <!-- Tab 1 content -->
-           </ion-tab>
-
-       <ion-tab title="Cardápio" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
-           <!-- Tab 2 content -->
-         </ion-tab>
-
-       <ion-tab title="Mapa" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
-           <!-- Tab 3 content -->
-       </ion-tab>
-     </ion-tabs>
-        
+        <ion-slide ion-slide-tab-label="Sobre">
+            <h1>Tab 1</h1>
         </ion-slide>
+        
+        <ion-slide ion-slide-tab-label="Informações">
+            <h1>Tab 2</h1>
+        </ion-slide>
+        
+        <ion-slide ion-slide-tab-label="Cardápio"> 
+        
+            <div class="lista">
+
+            <ul>
+                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Steak Simples</span> <span class="valor uk-align-right">R$ 35,00</span></li>
+                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Steak Poivre</span> <span class="valor uk-align-right">R$ 40,00</span></li>              <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Costelinha de Porco</span> <span class="valor uk-align-right">R$ 50,00</span></li>
+                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Vitela a Milanesa</span> <span class="valor uk-align-right">R$ 42,00</span></li>
+                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Steak Simples</span> <span class="valor uk-align-right">R$ 35,00</span></li>
+                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Steak Poivre</span> <span class="valor uk-align-right">R$ 40,00</span></li>              
+            </ul>
+                       
+            </div>    
+            
+            <ion-tabs class="tab_interna">
+                
+                <ion-tab title="Entradas">
+                536y5645
+                </ion-tab>
+
+                <ion-tab title="Grelhados">
+                asdfdsgbvfb
+                </ion-tab>
+
+                <ion-tab title="Acompanhamento">
+                    
+                    <div class="conteudo_tab_inside">
+
+                        <div class="lista">
+
+                            <ul>
+                                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Teste</span> <span class="valor uk-align-right">R$ 35,00</span></li>
+                                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Teste</span> <span class="valor uk-align-right">R$ 40,00</span></li>    <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Teste</span> <span class="valor uk-align-right">R$ 50,00</span></li>
+                                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Teste</span> <span class="valor uk-align-right">R$ 42,00</span></li>
+                                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Teste</span> <span class="valor uk-align-right">R$ 35,00</span></li>
+                                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Teste</span> <span class="valor uk-align-right">R$ 40,00</span></li>              
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    
+                </ion-tab>
+                
+            </ion-tabs>    
+            
+        </ion-slide>
+        
     </ion-slide-box>
+    
 </div>
     
       
       
-  </ion-content>
+</ion-content>
 </ion-view>
 
 <style type="text/css">
+    
 .scroll { 
-    min-width: 100%;
+min-width: 100%;
 }    
 
-    .box1, .box2, .box3 {
-        height: 130px;
-    }
+.box1, .box2, .box3 {
+height: 130px;
+}
+
+.lista ul li {
+    padding: 15px 10px;
+    border-bottom: 1px solid #d0d0d0;
+    background-color: #F8F8F8;
+}
+
+.cinza {
+color: #C7C7C7 !important;
+font-size: 25px;
+vertical-align: -3px;
+margin-right: 5px;
+}
     
+.valor {
+margin: 0px !important;
+padding: 0px !important;
+display: block;
+margin-top: 3px !important;
+}
+
+span.nome_produto, .valor {
+    font-size: 15px;
+    color: #717171;
+}
     
+.ng-animate .scroll-bar {
+visibility: hidden;
+}
     
-    .ng-animate .scroll-bar {
-        visibility: hidden;
-    }
+.tab_interna {
+    margin-top: 43px !important;
+    display: inline-block;
+}
+    
 </style>
