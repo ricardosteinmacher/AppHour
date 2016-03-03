@@ -1,19 +1,72 @@
 <ion-view view-title="Detalhes">
   <ion-content>
       
-      <ion-tabs class="tabs-positive tabs-icon-top">
-          <ion-tab title="Info" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
-            <!-- Tab 1 content -->
-            </ion-tab>
+ <div class="bannertop">
+    
+<!--
+    <ion-slide-box id="slidertop">
+       <ion-slide class="slidewidth">
+-->
+          <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box1">
+<!--
+          </div>
+       </ion-slide>
 
-        <ion-tab title="Cardápio" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
-            <!-- Tab 2 content -->
-          </ion-tab>
+       <ion-slide>
+          <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box2">
+          </div>
+       </ion-slide>
 
-        <ion-tab title="Mapa" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
-            <!-- Tab 3 content -->
-        </ion-tab>
-      </ion-tabs>
+       <ion-slide>
+          <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box3">
+          </div>
+       </ion-slide>
+    </ion-slide-box>
+-->
+      
+</div>
+      
+<div class="tabss">
+    <ion-slide-box slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
+        <ion-slide ion-slide-tab-label="test"><h1>Tab 1</h1></ion-slide>
+        <ion-slide ion-slide-tab-label="secondTest"><h1>Tab 2</h1></ion-slide>
+        <ion-slide ion-slide-tab-label="<b>boldTest</b>"><h1>Tab 3 </h1>
+        
+        <ion-tabs class="tabs-positive tabs-icon-top">
+         <ion-tab title="Info" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
+           <!-- Tab 1 content -->
+           </ion-tab>
+
+       <ion-tab title="Cardápio" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
+           <!-- Tab 2 content -->
+         </ion-tab>
+
+       <ion-tab title="Mapa" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
+           <!-- Tab 3 content -->
+       </ion-tab>
+     </ion-tabs>
+        
+        </ion-slide>
+    </ion-slide-box>
+</div>
+    
+      
       
   </ion-content>
 </ion-view>
+
+<style type="text/css">
+.scroll { 
+    min-width: 100%;
+}    
+
+    .box1, .box2, .box3 {
+        height: 130px;
+    }
+    
+    
+    
+    .ng-animate .scroll-bar {
+        visibility: hidden;
+    }
+</style>
