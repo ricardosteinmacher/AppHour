@@ -33,6 +33,7 @@ angular.module('AppHour')
                 if (data.data.status == '1') {
                     $rootScope.bares = data.data.bares;
                     var bares = data.data.bares;
+                    //console.log(bares);
                     for(var cat in bares)
                     {
                         console.log(bares[cat].est_nome +":");
@@ -183,7 +184,7 @@ return {
 //    }
     getBares: function(lat, long) {
         //Pega todos os estilos gravados no banco SEM REPETIÇÕES
-//        var query = "SELECT DISTINCT est_cod, est_nome FROM estilo";
+//        var query = "SELECT DISTINCT est_cod, est_nome FROM estilo WHERE est_cod != 0";
 //            $cordovaSQLite.execute(db, query).then(function(res) {
 //                
 //                $rootScope.bares = [];

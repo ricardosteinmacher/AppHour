@@ -32,11 +32,11 @@
     <div id = "content-div">
         
         <ion-list>
-            <ion-item ng-repeat="item in cells">
+            <ion-item ng-repeat="item in bares">
                 <div class="cell" id = "1">
-                    <label class="cell-title">{{item.title}}</label>
+                    <label class="cell-title">{{item.est_nome}}</label>
                     <ion-scroll direction="x" class="cell-scroll">
-                        <a class="button cell-scroll-btn" ui-sref="app.details" ng-repeat="item in item.bares">{{item.id}}</a>
+                        <a class="button cell-scroll-btn" ui-sref="app.details" ng-repeat="item in item.est_bares">{{item.bar_nome}}</a>
                     </ion-scroll>
                 </div>
             </ion-item>

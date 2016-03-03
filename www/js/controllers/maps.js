@@ -30,7 +30,7 @@ angular.module('AppHour')
 
 .controller('MapsCtrl', function($scope, $stateParams,  $ionicLoading, $rootScope) {
    
-    // Map Settings //
+    // Map Settings // 
     $scope.initialise = function() {
         var i=0;
         var places=[];
