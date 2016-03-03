@@ -31,14 +31,14 @@
 <!--    <div id = "content-div" ng-bind-html="myHTML">-->
     <div id = "content-div">
         
-        <ion-list class="cell">
+        <ion-list>
             <ion-item ng-repeat="item in cells">
-<!--                <div class="cell" id = "1">-->
+                <div class="cell" id = "1">
                     <label class="cell-title">{{item.title}}</label>
                     <ion-scroll direction="x" class="cell-scroll">
                         <a class="button cell-scroll-btn" ui-sref="app.details" ng-repeat="item in item.bares">{{item.id}}</a>
                     </ion-scroll>
-<!--                </div>-->
+                </div>
             </ion-item>
         </ion-list>
 <!--
