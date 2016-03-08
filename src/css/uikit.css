@@ -47,10 +47,9 @@ a,
   text-decoration: none;
   cursor: pointer;
 }
-a:hover,
-.uk-link:hover {
-  color: #005599;
-  text-decoration: underline;
+a:hover, .uk-link:hover {
+    color: #FFFFFF;
+    text-decoration: none;
 }
 /* Text-level semantics
  ========================================================================== */
