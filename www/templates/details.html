@@ -1,61 +1,144 @@
-<ion-view view-title="Detalhes">
-<ion-content>
-      
- <div class="bannertop">
+<ion-view title="{{bar.bar_nome}}">
+
+    <ion-content>
+        <div class="bannertop">
+            <ion-slide-box id="slidertop">
+                <ion-slide class="slidewidth">
+                    <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box1">
+                    </div>
+                </ion-slide>
+
+                <ion-slide>
+                    <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box2">
+                    </div>
+                </ion-slide>
+        
+                <ion-slide>
+                    <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box3">
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+        </div> 
     
+        <ion-content style="margin-top: 130px;">
+        <div class="tabss">
+            
+                <ion-tabs class="tabs-positive tabs-icon-only" >
+                    <ion-tab title="Home">
+                        <ion-content>
+                            <h1>{{bar.bar_sobre}}</h1> 
+                        </ion-content>
+                    </ion-tab>
+                    <ion-tab title="About">
+                        <ion-content>
+                            <h1>{{bar.bar_telefone1}}}</h1>
+                        </ion-content>
+                    </ion-tab>
+                    
+                    <ion-tab title="Settings">
+                        <ion-content>
+                               <h1>{{bar.bar_telefone2}}</h1>
+                        </ion-content>
+                    </ion-tab>
+                </ion-tabs>
+            
+        </div>
+        </ion-content>
+    </ion-content>
+</ion-view>
+              
 <!--
-    <ion-slide-box id="slidertop">
-       <ion-slide class="slidewidth">
+            <ion-slide-box slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
+            
+            <ion-slide ion-slide-tab-label="Sobre">
+                <h1>Tab 1.1</h1>
+            </ion-slide>
+            
+            <ion-slide ion-slide-tab-label="Informações">
+                <h1>Tab 1.2</h1>
+            </ion-slide>
+            
+            <ion-slide ion-slide-tab-label="Cardápio">
+                <h1>Tab 1.3</h1>
+            </ion-slide>
+                <ion-slide ion-slide-tab-label="Cardo">
+                <h1>Tab 1.4</h1>
+            </ion-slide>
+                <ion-slide ion-slide-tab-label="Cdápio">
+                <h1>Tab 1.5</h1>
+            </ion-slide>
+                <ion-slide ion-slide-tab-label="Caweqwpio">
+                <h1>Tab 1.6</h1>
+            </ion-slide>
+                <ion-slide ion-slide-tab-label="Crtrtapio">
+                <h1>Tab 1.7</h1>
+            </ion-slide>
+                <ion-slide ion-slide-tab-label="Capgfgfgfgio">
+                <h1>Tab 1.8</h1>
+            </ion-slide>
+                <ion-slide ion-slide-tab-label="sdfdsf">
+                <h1>Tab 1.9</h1>
+            </ion-slide>
+        </ion-slide-box>
 -->
-          <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box1">
+         
+ 
+<!--<div class="tabss">-->
 <!--
-          </div>
-       </ion-slide>
-
-       <ion-slide>
-          <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box2">
-          </div>
-       </ion-slide>
-
-       <ion-slide>
-          <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box3">
-          </div>
-       </ion-slide>
-    </ion-slide-box>
--->
-      
-</div> </div> 
-      
-<div class="tabss">
     
     <ion-slide-box slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
         
         <ion-slide ion-slide-tab-label="Sobre">
-            <h1>Tab 1</h1>
+            <h1>Tab 1.1</h1>
         </ion-slide>
         
         <ion-slide ion-slide-tab-label="Informações">
-            <h1>Tab 2</h1>
+            <h1>Tab 1.2</h1>
         </ion-slide>
         
-        <ion-slide ion-slide-tab-label="Cardápio"> 
-        
+        <ion-slide ion-slide-tab-label="Cardápio">
+            <h1>Tab 1.3</h1>
+        </ion-slide>
+-->
+
+<!--
             <div class="lista">
+                
+                
+                <ion-list>
+                    <ion-item ng-repeat="item in bares">
+                        <div class="cell" id = "1">
+                            <label class="cell-title">{{item.est_nome}}</label>
+                            <ion-scroll direction="x" class="cell-scroll">
+                                <a class="button cell-scroll-btn" ng-click="openDetail(item)" ui- ng-repeat="item in item.est_bares">{{item.bar_nome}}</a>
+                            </ion-scroll>
+                        </div>
+                    </ion-item>
+                </ion-list>
+                
 
             <ul>
-                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Steak Simples</span> <span class="valor uk-align-right">R$ 35,00</span></li>
-                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Steak Poivre</span> <span class="valor uk-align-right">R$ 40,00</span></li>              <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Costelinha de Porco</span> <span class="valor uk-align-right">R$ 50,00</span></li>
-                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Vitela a Milanesa</span> <span class="valor uk-align-right">R$ 42,00</span></li>
-                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Steak Simples</span> <span class="valor uk-align-right">R$ 35,00</span></li>
-                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Steak Poivre</span> <span class="valor uk-align-right">R$ 40,00</span></li>              
+                <li>
+                    <i class="uk-icon-info-circle cinza"></i>
+                    <span class="nome_produto">Steak Simples</span>
+                    <span class="valor uk-align-right">R$ 35,00</span>
+                </li>         
             </ul>
                        
             </div>    
+-->
             
+<!--
             <ion-tabs class="tab_interna">
                 
                 <ion-tab title="Entradas">
-                536y5645
+                    <ion-list>
+                        <ion-item>
+                            <div class="uk-icon-info-circle cinza"></div>
+                            <span class="nome_produto">Steak Simples</span>
+                            <span class="valor uk-align-right">R$ 35,00</span>
+                        </ion-item>
+                    </ion-list>
                 </ion-tab>
 
                 <ion-tab title="Grelhados">
@@ -83,20 +166,22 @@
                 </ion-tab>
                 
             </ion-tabs>    
-            
+-->
+
+<!--
         </ion-slide>
         
     </ion-slide-box>
+-->
     
-</div>
+<!--</div>-->
     
       
       
-</ion-content>
-</ion-view>
+
 
 <style type="text/css">
-    
+
 .scroll { 
 min-width: 100%;
 }    

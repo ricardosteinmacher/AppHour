@@ -2,11 +2,15 @@
 
 angular.module('AppHour')
 
-.controller('HomeCtrl', function($scope, $state, $ionicLoading, $http, $cordovaSQLite, $rootScope, $cordovaSocialSharing, $ionicSlideBoxDelegate, DB_local, web_services) {
+.controller('HomeCtrl', function($scope, $state, $ionicLoading, $http, $cordovaSQLite, $rootScope, $cordovaSocialSharing, $ionicSlideBoxDelegate, DB_local, web_services, barService) {
     
 //    $scope.nextSlide = function() {
 //        $ionicSlideBoxDelegate.next();
 //     }
+    
+     $scope.navSlide = function(index) {
+        $ionicSlideBoxDelegate.slide(index, 50);
+    }
         
     $scope.doRefresh = function() {
         $rootScope.bares = null;
@@ -32,10 +36,15 @@ angular.module('AppHour')
                     DB_local.saveHome();
                     $scope.$broadcast('scroll.refreshComplete');
                 })
-            //} 
+            //}
             $scope.$broadcast('scroll.refreshComplete');
       });
     }
+    
+    $scope.openDetail = function(Obj){
+        barService.setBar(Obj);
+        $state.go('app.details');
+    };
 
     $scope.testWS = function() {
         DB_local.saveHome();

@@ -4010,7 +4010,7 @@ a.subdued {
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 500;
     line-height: 44px; }
     .bar .title.title-left {
@@ -4128,7 +4128,7 @@ a.subdued {
     background: #fc3f1e;
     box-shadow: none;
     color: #FFF;
-    font-size: 17px; }
+    font-size: 13px; }
   .bar-stable .button.button-icon {
     border-color: transparent;
     background: none; }

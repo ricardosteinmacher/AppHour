@@ -79,3 +79,11 @@ ion-slide:nth-child(2n) {
         transform: scale(2.5);
     }
 }
+#contact_view #contact_card .slider-pager {
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}
+#contact_view #contact_card .slider-pager .slider-pager-page {
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}

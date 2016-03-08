@@ -245,4 +245,23 @@ return {
 //        }
     }
 };
+})
+
+.service('barService', function() {
+  var bar_selecionado;
+
+  var setBar = function(newObj) {
+     // productList.push(newObj);
+      bar_selecionado = newObj;
+  };
+
+  var getBar = function(){
+      return bar_selecionado;
+  };
+
+  return {
+    setBar: setBar,
+    getBar: getBar
+  };
+
 });

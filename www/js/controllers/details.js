@@ -2,6 +2,8 @@
 
 angular.module('AppHour')
 
-.controller('DetailsCtrl', function($scope, $state, $ionicLoading) {
+.controller('DetailsCtrl', function($scope, $state, $ionicLoading, $ionicSlideBoxDelegate, barService) {
+    $scope.bar = barService.getBar();
     
+   
 });

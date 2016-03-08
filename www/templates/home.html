@@ -6,100 +6,46 @@
     </ion-nav-buttons>
 
 <ion-content class="has-header">
+    
     <ion-refresher
         pulling-text="Puxe para atualizar..."
         on-refresh="doRefresh()">
     </ion-refresher>
-<div class="slidertop">
-    <ion-slide-box id="slidertop">
-       <ion-slide class="slidewidth">
-          <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box1">
-          </div>
-       </ion-slide>
+    
+    
+    <div class="slidertop">
+        <ion-slide-box id="slidertop" auto-play="true" does-continue="true">
+            <ion-slide class="slidewidth">
+                <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box1">
+                </div>
+            </ion-slide>
+            
+            <ion-slide>
+                <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box2">
+                </div>
+            </ion-slide>
+            
+            <ion-slide>
+                <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box3">
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+    </div>  
 
-       <ion-slide>
-          <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box2">
-          </div>
-       </ion-slide>
-
-       <ion-slide>
-          <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box3">
-          </div>
-       </ion-slide>
-    </ion-slide-box>
-  </div>  
-<!--    <div id = "content-div" ng-bind-html="myHTML">-->
     <div id = "content-div">
-        
         <ion-list>
             <ion-item ng-repeat="item in bares">
                 <div class="cell" id = "1">
                     <label class="cell-title">{{item.est_nome}}</label>
                     <ion-scroll direction="x" class="cell-scroll">
-                        <a class="button cell-scroll-btn" ui-sref="app.details" ng-repeat="item in item.est_bares">{{item.bar_nome}}</a>
+                        <a class="button cell-scroll-btn" ng-click="openDetail(item)" ui- ng-repeat="item in item.est_bares">{{item.bar_nome}}</a>
                     </ion-scroll>
                 </div>
             </ion-item>
         </ion-list>
-<!--
-        <div class="cell" id = "1">
-            <label class="cell-title">Para comer algo:</label>
-            <ion-scroll direction="x" class="cell-scroll">
-                <a class="button cell-scroll-btn" ui-sref="app.details">Zapata</a>
-                <a class="button cell-scroll-btn" ui-sref="app.details">Woods</a>
-                <a class="button cell-scroll-btn" ui-sref="app.details">+55</a>
-                <a class="button cell-scroll-btn" ui-sref="app.details">Woods</a>
-                <a class="button cell-scroll-btn" ui-sref="app.details">+55</a>
-            </ion-scroll>
-        </div>
--->
-        
-<!--
-        <div class="cell">
-            <label class="cell-title">Para comer algo:</label>
-            <ion-scroll direction="x" class="cell-scroll">
-                <a class="button cell-scroll-btn">Zapata</a>
-                <a class="button cell-scroll-btn">Woods</a>
-                <a class="button cell-scroll-btn">+55</a>
-                <a class="button cell-scroll-btn">Bar Zinho</a>
-                <a class="button cell-scroll-btn">button</a>
-                <a class="button cell-scroll-btn">button</a>
-                <a class="button cell-scroll-btn">button</a>
-                <a class="button cell-scroll-btn">button</a>
-            </ion-scroll>
-        </div>
-        
-        <div class="cell">
-            <label class="cell-title">Para comer algo:</label>
-            <ion-scroll direction="x" class="cell-scroll">
-                <a class="button cell-scroll-btn">Zapata</a>
-                <a class="button cell-scroll-btn">Woods</a>
-                <a class="button cell-scroll-btn">+55</a>
-                <a class="button cell-scroll-btn">Bar Zinho</a>
-                <a class="button cell-scroll-btn">button</a>
-                <a class="button cell-scroll-btn">button</a>
-                <a class="button cell-scroll-btn">button</a>
-                <a class="button cell-scroll-btn">button</a>
-            </ion-scroll>
-        </div>
-        
-        <div class="cell">
-            <label class="cell-title">Para comer algo:</label>
-            <ion-scroll direction="x" class="cell-scroll">
-                <a class="button cell-scroll-btn">Zapata</a>
-                <a class="button cell-scroll-btn">Woods</a>
-                <a class="button cell-scroll-btn">+55</a>
-                <a class="button cell-scroll-btn">Bar Zinho</a>
-                <a class="button cell-scroll-btn">button</a>
-                <a class="button cell-scroll-btn">button</a>
-                <a class="button cell-scroll-btn">button</a>
-                <a class="button cell-scroll-btn">button</a>
-            </ion-scroll>
-        </div>
--->
-        
     </div>
     
+
 <style type="text/css">
 .scroll { 
     min-width: 100%;
@@ -108,8 +54,6 @@
     .box1, .box2, .box3 {
         height: 130px;
     }
-    
-    
     
     .ng-animate .scroll-bar {
         visibility: hidden;
