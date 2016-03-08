@@ -47,13 +47,10 @@ angular.module('AppHour')
                                 lat : bar.bar_latitude,
                                 long : bar.bar_longitude
                             };
-                            console.log(i);
-                            //console.log("  - " + bar.bar_nome + " / ID: " + bar.bar_cod + " / " + bar.bar_distancia);
                             j++;
                             i++;
                         }
                     }
-        console.log(places);
         
         var myLatlng = new google.maps.LatLng(37.3000, -120.4833);
         var mapOptions = {
