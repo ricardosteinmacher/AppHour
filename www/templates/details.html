@@ -1,80 +1,113 @@
 <ion-view title="{{bar.bar_nome}}">
 
     <ion-content>
+        
         <div class="bannertop">
+            
             <ion-slide-box id="slidertop">
+                
                 <ion-slide class="slidewidth">
                     <div style="background-image:url(img/filtro.png); background-size:cover; background-position:center center;">
-                    <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box1">
-                    </div>
+                        <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box1">
+                        </div>
                     </div>
                 </ion-slide>
 
                 <ion-slide class="slidewidth">
-                    
                     <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box1">
                         <div style="background-image:url(img/filtro.png); background-size:cover; background-position:center center; height:130px;">
-                            <div>Bla</div>
+                            <div>
+                                Bla
+                            </div>
                         </div>
                     </div>
-                    
                 </ion-slide>
         
                 <ion-slide class="slidewidth">
                     <div style="background-image:url(img/filtro.png); background-size:cover; background-position:center center;">
-                    <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box1">
-                    </div>
+                        <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box1">
+                        </div>
                     </div>
                 </ion-slide>
+                
             </ion-slide-box>
+            
         </div> 
     
         <ion-content style="margin-top: 130px;">
+            
             <div class="tabss">
+                
+            
                 <ion-tabs class="tabs-positive tabs-icon-only" >
-                    <ion-tab title="Sobre">
-                        
                                 
-                            
+                    <ion-tab title="Sobre">
                              <ion-content class="background">
                                 <div class="conteudo">
                                 {{bar.bar_sobre}}
                                 </div>
                             </ion-content>
                     </ion-tab>
-                    <ion-tab title="Informações">
-                       
-                            <h1>{{bar.bar_telefone1}}</h1>
-                            asdasdsads
-                        
+                    
+                    
+                    <ion-tab title="Informações">                                                    
+                       <ion-content class="background">
+                           <div class="lista fonte-vermelha">
+                               <ul>
+                                   <li>
+                                       <i class="uk-icon-clock-o icon-big"></i> {{bar.bar_telefone2}}
+                                   </li>
+                                   <li>
+                                       <i class="uk-icon-phone icon-big"></i> {{bar.bar_telefone2}}
+                                   </li>
+                                   <li>
+                                       <i class="uk-icon-cutlery icon-big"></i> {{bar.bar_telefone2}}
+                                   </li>
+                               </ul>
+                           </div>
+                           
+                            <div class="boxmapa">
+                            <div class="btn-mapa">
+                                <button class="botao">Traçar Rota</button>
+                            </div>
+                            </div> 
+                           
+                           
+                        </ion-content>                       
                     </ion-tab>
                     
+    
                     <ion-tab title="Cardápio">
-                       
-                            <h1>{{bar.bar_telefone2}}</h1>
-                            çolhlkjhkljh
-                            <h1>{{bar.bar_telefone2}}</h1>
-                        
+                        <ion-content class="background">
+                           <div class="conteudo">
+                               {{bar.bar_telefone2}}
+                           </div>
+                        </ion-content>
                     </ion-tab>
                     
                     
                     <ion-tab title="Promoções">
-                       
-                            <h1>{{bar.bar_telefone2}}</h1>
-                            çolhlkjhkljh
-                            <h1>{{bar.bar_telefone2}}</h1>
-                        
+                       <ion-content class="background">
+                           <div class="conteudo">
+                               {{bar.bar_telefone2}}
+                           </div>
+                        </ion-content> 
                     </ion-tab>
                     
-                    
-                    
-                    
                 </ion-tabs>
+                
             </div>
+            
         </ion-content>
+        
     </ion-content>
+            
+</ion-content>
+
+    
 </ion-view>
               
+
 <!--
             <ion-slide-box slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
             
@@ -221,13 +254,41 @@ height: 130px;
 }
 
 .lista ul li {
-    padding: 15px 10px;
+    padding: 18px 10px;
     border-bottom: 1px solid #d0d0d0;
     background-color: #F8F8F8;
+}
+    
+.boxmapa {
+    background: #D2D2D2;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    display: block;
+}
+    
+.btn-mapa {
+position: relative;
+bottom: -180px;
+}
+    
+.botao {
+    border-radius: 30px;
+    border: none;
+    padding: 10px 25px;
+    background-color: #fc3f1e;
+    color: white;
+    font-size: 15px;
 }
 
 .cinza {
 color: #C7C7C7 !important;
+font-size: 25px;
+vertical-align: -3px;
+margin-right: 5px;
+}
+    
+.icon-big {
 font-size: 25px;
 vertical-align: -3px;
 margin-right: 5px;
@@ -240,9 +301,14 @@ display: block;
 margin-top: 3px !important;
 }
 
-span.nome_produto, .valor {
+.fonte-cinza {
     font-size: 15px;
     color: #717171;
+}
+
+.fonte-vermelha {
+    font-size: 15px;
+    color: #fc3f1e;
 }
     
 .ng-animate .scroll-bar {
