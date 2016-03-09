@@ -33,7 +33,7 @@
 .cell-scroll-btn {
     width: 80px;
     height: 80px;
-    background-color: #E6E6E6;
+    background-color: transparent;
     margin-left: 10px;
     text-align: left;
 }

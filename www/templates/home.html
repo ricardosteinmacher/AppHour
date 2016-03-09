@@ -17,8 +17,14 @@
         <ion-slide-box id="slidertop" auto-play="true" does-continue="true">
             <ion-slide class="slidewidth" ng-repeat="item in bares">
                 <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box1">
+                        <div style="background-image:url(img/filtro.png); background-size:100% 130px; background-position: bottom bottom; height:130px;">
+                            <div>
+                                Bla
+                            </div>
+                        </div>
                 </div>
             </ion-slide>
+            
             
 <!--
             <ion-slide>
@@ -40,12 +46,30 @@
                 <div class="cell" id = "1">
                     <label class="cell-title">{{item.est_nome}}</label>
                     <ion-scroll direction="x" class="cell-scroll">
-                        <a class="button cell-scroll-btn" ng-repeat="item in item.est_bares" style="background-image:url(http://i0.wp.com/aosviajantes.com.br/wp-content/uploads/restaurante-buenos-aires-cabana.jpg?resize=256%2C256); background-size:cover; background-position:center center;"  ng-click="openDetail(item)" ui- >{{item.bar_nome}}</a>
+                        
+<!--                        <button class="button cell-scroll-btn" ng-repeat="item in item.est_bares" ng-click="openDetail(item)" ui- >{{item.bar_nome}}-->
+                        
+<div class="cell-scroll-btn" style="background-image:url(http://i0.wp.com/aosviajantes.com.br/wp-content/uploads/restaurante-buenos-aires-cabana.jpg?resize=256%2C256);background-position: center center;background-size: cover;border-radius: 5px;">
+                            
+                    <div ng-click="openDetail(item)" style="background-image:url(img/filtro.png); background-size:cover; background-position:center center;height: 80px;border-radius: 5px">
+                        
+                        
+<!--                        </button>-->
+                    </div>
+                        </div>
+                        
+                        
+<!--                        </button>-->
+                    </div>
+                        </div>
                     </ion-scroll>
                 </div>
             </ion-item>
         </ion-list>
     </div>
+   
+    
+    
     
 <style type="text/css">
 .scroll { 
