@@ -36,6 +36,8 @@
     background-color: transparent;
     margin-left: 10px;
     text-align: left;
+    border: none;
+    padding: 0px;
 }
 
 .slider {
