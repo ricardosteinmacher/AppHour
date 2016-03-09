@@ -27,17 +27,18 @@ angular.module('AppHour')
 //            if(navigator.connection.type == Connection.NONE) {
 //                window.alert("sem internet");
 //                DB_local.getBares(pos.coords.latitude, pos.coords.longitude).then(function(result) {
-//                    $scope.$broadcast('scroll.refreshComplete');
 //                });
 //              }
 //            else {
                 web_services.lista_bares(pos.coords.latitude, pos.coords.longitude).then(function(result) {
                     console.log("com internet");
                     DB_local.saveHome();
-                    $scope.$broadcast('scroll.refreshComplete');
+                    $ionicSlideBoxDelegate.update();
                 })
             //}
+                
             $scope.$broadcast('scroll.refreshComplete');
+            
       });
     }
     

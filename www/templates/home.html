@@ -15,11 +15,12 @@
     
     <div class="slidertop">
         <ion-slide-box id="slidertop" auto-play="true" does-continue="true">
-            <ion-slide class="slidewidth">
+            <ion-slide class="slidewidth" ng-repeat="item in bares">
                 <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box1">
                 </div>
             </ion-slide>
             
+<!--
             <ion-slide>
                 <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box2">
                 </div>
@@ -29,6 +30,7 @@
                 <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box3">
                 </div>
             </ion-slide>
+-->
         </ion-slide-box>
     </div>  
 
@@ -38,14 +40,13 @@
                 <div class="cell" id = "1">
                     <label class="cell-title">{{item.est_nome}}</label>
                     <ion-scroll direction="x" class="cell-scroll">
-                        <a class="button cell-scroll-btn" ng-click="openDetail(item)" ui- ng-repeat="item in item.est_bares">{{item.bar_nome}}</a>
+                        <a class="button cell-scroll-btn" ng-repeat="item in item.est_bares" style="background-image:url(http://i0.wp.com/aosviajantes.com.br/wp-content/uploads/restaurante-buenos-aires-cabana.jpg?resize=256%2C256); background-size:cover; background-position:center center;"  ng-click="openDetail(item)" ui- >{{item.bar_nome}}</a>
                     </ion-scroll>
                 </div>
             </ion-item>
         </ion-list>
     </div>
     
-
 <style type="text/css">
 .scroll { 
     min-width: 100%;
