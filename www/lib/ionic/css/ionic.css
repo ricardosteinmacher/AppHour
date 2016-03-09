@@ -3351,17 +3351,18 @@ body.grade-c {
   position: relative; }
 
 .scroll-content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  margin-top: -1px;
-  padding-top: 1px;
-  margin-bottom: -1px;
-  width: auto;
-  height: auto; }
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    width: auto;
+    height: auto;
+    padding: 6px 20px;
+}
 
 .menu .scroll-content.scroll-content-false {
   z-index: 11; }
@@ -3529,10 +3530,10 @@ ion-infinite-scroll {
 .has-tabs,
 .bar-footer.has-tabs {
   bottom: 49px; }
-.has-tabs.pane, .bar-footer.has-tabs.pane {
-    bottom: 0px;
-    height: auto;
-}
+  .has-tabs.pane,
+  .bar-footer.has-tabs.pane {
+    bottom: 49px;
+    height: auto; }
 
 .bar-subfooter.has-tabs {
   bottom: 93px; }
@@ -4396,10 +4397,6 @@ a.subdued {
     position: fixed;
     top: -1px;
     box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.25);
-}
-
-.lista {
-    margin-top: 50px;
 }
 
 span.tab-title.ng-binding:hover {

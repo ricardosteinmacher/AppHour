@@ -16,11 +16,9 @@
     <div class="slidertop">
         <ion-slide-box id="slidertop" auto-play="true" does-continue="true">
             <ion-slide class="slidewidth" ng-repeat="item in bares">
-                <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box1">
+                <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center; position:relative;" class = "box box1">
                         <div style="background-image:url(img/filtro.png); background-size:100% 130px; background-position: bottom bottom; height:130px;">
-                            <div>
-                                Bla
-                            </div>
+                            <div style="color:white; position:absolute;top: 90px;left: 10px;font-size: 18px;" class="">Nome do Buteco</div>
                         </div>
                 </div>
             </ion-slide>
@@ -49,10 +47,11 @@
 
 <!--                            <button class="button cell-scroll-btn" ng-repeat="item in item.est_bares" ng-click="openDetail(item)" ui- >{{item.bar_nome}}</button>-->
 
-                        <button class="cell-scroll-btn" ng-repeat="item in item.est_bares" ng-click="openDetail(item)" ui- style="background-image:url(http://i0.wp.com/aosviajantes.com.br/wp-content/uploads/restaurante-buenos-aires-cabana.jpg?resize=256%2C256);background-position: center center;background-size: cover;border-radius: 5px;">
+                        <button class="cell-scroll-btn" ng-repeat="item in item.est_bares" ng-click="openDetail(item)" ui- style="background-image:url(http://i0.wp.com/aosviajantes.com.br/wp-content/uploads/restaurante-buenos-aires-cabana.jpg?resize=256%2C256);background-position: center center;background-size: cover;border-radius: 5px; position:relative;">
 
                         <div ng-click="openDetail(item)" style="background-image:url(img/filtro.png); background-size:cover; background-position:center center;height: 80px;border-radius: 5px">
-
+                            
+                            <div style="color:white; position:absolute;bottom: 18px;left: 5px;font-size: 12px;letter-spacing: -0.5px;" class="">Nome do Buteco</div>
 
                         </div>
                         </button>
