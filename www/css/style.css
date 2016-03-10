@@ -44,3 +44,10 @@
     height: 100%;
     text-align: center
 }
+
+.bar-footer.has-tabs.pane, .has-tabs.pane {
+    bottom: 0px !important;
+}
+.has-tabs, .bar-footer.has-tabs {
+    bottom: 0px !important;
+}

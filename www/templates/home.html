@@ -17,8 +17,8 @@
         <ion-slide-box id="slidertop" auto-play="true" does-continue="true">
             <ion-slide class="slidewidth" ng-repeat="item in bares">
                 <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center; position:relative;" class = "box box1">
-                        <div style="background-image:url(img/filtro.png); background-size:100% 130px; background-position: bottom bottom; height:130px;">
-                            <div style="color:white; position:absolute;top: 90px;left: 10px;font-size: 18px;" class="">Nome do Buteco</div>
+                        <div style="background-image:url(img/filtro_topo.png); background-size:100% 130px; background-position: bottom bottom; height:130px;">
+                            <div style="color:white; position:absolute;top: 90px;left: 10px;font-size: 19px;" class="">Nome do Buteco</div>
                         </div>
                 </div>
             </ion-slide>
@@ -29,12 +29,8 @@
                 <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box2">
                 </div>
             </ion-slide>
-            
-            <ion-slide>
-                <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box3">
-                </div>
-            </ion-slide>
 -->
+            
         </ion-slide-box>
     </div>  
 
@@ -51,7 +47,7 @@
 
                         <div ng-click="openDetail(item)" style="background-image:url(img/filtro.png); background-size:cover; background-position:center center;height: 80px;border-radius: 5px">
                             
-                            <div style="color:white; position:absolute;bottom: 18px;left: 5px;font-size: 12px;letter-spacing: -0.5px;" class="">Nome do Buteco</div>
+                            <div style="color:white; position:absolute;bottom: 4px;left: 5px;font-size: 12px;letter-spacing: -0.5px;" class="">{{item.bar_nome}}</div>
 
                         </div>
                         </button>

@@ -4416,8 +4416,8 @@ h1.ng-binding {
 }
 
 .conteudo {
-    margin-top: 65px;
-    padding: 0px 20px;
+/*    margin-top: 65px;*/
+    padding: 65px 20px 20px 20px;
 }
 
 .tabs-positive > .tabs .tab-item .badge,

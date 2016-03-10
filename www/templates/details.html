@@ -34,12 +34,12 @@
             
         </div> 
     
-        <ion-content style="margin-top: 130px;">
+        <ion-content style="margin-top: 130px;" >
             
             <div class="tabss">
                 
             
-                <ion-tabs class="tabs-positive tabs-icon-only" >
+                <ion-tabs class="tabs-positive tabs-icon-only"s>
                                 
                     <ion-tab title="Sobre">
                              <ion-content class="background">
@@ -49,26 +49,32 @@
                             </ion-content>
                     </ion-tab>
                     
-                    
                     <ion-tab title="Informações">                                                    
                        <ion-content class="background">
                            <div class="lista fonte-vermelha">
                                <ul>
+<!--                                   <li ng-repeat="item in itens">-->
                                    <li>
-                                       <i class="uk-icon-clock-o icon-big"></i> {{bar.bar_telefone2}}
+                                       <img src="img/ico_relogio.png" style="height: 26px;"/>
+                                       <i></i> {{bar.bar_telefone2}} kajshdakjsdhsakjdkj kajsdkha
+                                   </li>
+                                   <li content="telephone=no">
+                                       <img src="img/ico_fone.png" style="height: 26px;"/>
+                                       <meta name="format-detection" content="telephone=no">                    {{bar.bar_telefone2}}
+                                        </meta>
                                    </li>
                                    <li>
-                                       <i class="uk-icon-phone icon-big"></i> {{bar.bar_telefone2}}
-                                   </li>
-                                   <li>
-                                       <i class="uk-icon-cutlery icon-big"></i> {{bar.bar_telefone2}}
+                                       <img src="img/ico_talher.png" style="height: 26px;"/>
+                                       {{bar.bar_telefone2}}
                                    </li>
                                </ul>
                            </div>
+                    <div class="barra_vermelha"></div>
                            
-                            <div class="boxmapa">
+                            <div class="boxmapa" style="background-image:url(img/mapa_720.png); background-size:cover; background-position:center center; position:relative;">
+                                
                             <div class="btn-mapa">
-                                <button class="botao">Traçar Rota</button>
+                                <button class="botao" ng-click="tracarRota()">Traçar Rota</button>
                             </div>
                             </div> 
                            
@@ -79,13 +85,27 @@
     
                     <ion-tab title="Cardápio">
                         <ion-content class="background">
-                           <div class="conteudo">
-                               {{bar.bar_telefone2}}
+                           <div class="conteudo"> 
+                               <ion-list>
+                                   <div ng-repeat="group in itens">
+                                       <ion-item class="item-stable" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
+                                           <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;
+                                           {{group.Nome}}
+                                       </ion-item>
+                                       <ion-item class="item-accordion" ng-repeat="item in group.Receitas" ng-show="isGroupShown(group)">
+                                           <div class="list_pratos">
+                                            {{item.Nome}} - R${{item.Preco}}
+                                           </div>
+                                           
+                                       </ion-item>
+                                   </div>
+                               </ion-list>
                            </div>
                         </ion-content>
                     </ion-tab>
                     
                     
+<!--
                     <ion-tab title="Promoções">
                        <ion-content class="background">
                            <div class="conteudo">
@@ -93,164 +113,50 @@
                            </div>
                         </ion-content> 
                     </ion-tab>
+-->
                     
                 </ion-tabs>
                 
             </div>
             
         </ion-content>
-        
+        <div id="map" data-tap-disabled="true"></div>
     </ion-content>
-            
-</ion-content>
-
     
 </ion-view>
-              
-
-<!--
-            <ion-slide-box slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
-            
-            <ion-slide ion-slide-tab-label="Sobre">
-                <h1>Tab 1.1</h1>
-            </ion-slide>
-            
-            <ion-slide ion-slide-tab-label="Informações">
-                <h1>Tab 1.2</h1>
-            </ion-slide>
-            
-            <ion-slide ion-slide-tab-label="Cardápio">
-                <h1>Tab 1.3</h1>
-            </ion-slide>
-                <ion-slide ion-slide-tab-label="Cardo">
-                <h1>Tab 1.4</h1>
-            </ion-slide>
-                <ion-slide ion-slide-tab-label="Cdápio">
-                <h1>Tab 1.5</h1>
-            </ion-slide>
-                <ion-slide ion-slide-tab-label="Caweqwpio">
-                <h1>Tab 1.6</h1>
-            </ion-slide>
-                <ion-slide ion-slide-tab-label="Crtrtapio">
-                <h1>Tab 1.7</h1>
-            </ion-slide>
-                <ion-slide ion-slide-tab-label="Capgfgfgfgio">
-                <h1>Tab 1.8</h1>
-            </ion-slide>
-                <ion-slide ion-slide-tab-label="sdfdsf">
-                <h1>Tab 1.9</h1>
-            </ion-slide>
-        </ion-slide-box>
--->
-         
- 
-<!--<div class="tabss">-->
-<!--
-    
-    <ion-slide-box slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
-        
-        <ion-slide ion-slide-tab-label="Sobre">
-            <h1>Tab 1.1</h1>
-        </ion-slide>
-        
-        <ion-slide ion-slide-tab-label="Informações">
-            <h1>Tab 1.2</h1>
-        </ion-slide>
-        
-        <ion-slide ion-slide-tab-label="Cardápio">
-            <h1>Tab 1.3</h1>
-        </ion-slide>
--->
-
-<!--
-            <div class="lista">
-                
-                
-                <ion-list>
-                    <ion-item ng-repeat="item in bares">
-                        <div class="cell" id = "1">
-                            <label class="cell-title">{{item.est_nome}}</label>
-                            <ion-scroll direction="x" class="cell-scroll">
-                                <a class="button cell-scroll-btn" ng-click="openDetail(item)" ui- ng-repeat="item in item.est_bares">{{item.bar_nome}}</a>
-                            </ion-scroll>
-                        </div>
-                    </ion-item>
-                </ion-list>
-                
-
-            <ul>
-                <li>
-                    <i class="uk-icon-info-circle cinza"></i>
-                    <span class="nome_produto">Steak Simples</span>
-                    <span class="valor uk-align-right">R$ 35,00</span>
-                </li>         
-            </ul>
-                       
-            </div>    
--->
-            
-<!--
-            <ion-tabs class="tab_interna">
-                
-                <ion-tab title="Entradas">
-                    <ion-list>
-                        <ion-item>
-                            <div class="uk-icon-info-circle cinza"></div>
-                            <span class="nome_produto">Steak Simples</span>
-                            <span class="valor uk-align-right">R$ 35,00</span>
-                        </ion-item>
-                    </ion-list>
-                </ion-tab>
-
-                <ion-tab title="Grelhados">
-                asdfdsgbvfb
-                </ion-tab>
-
-                <ion-tab title="Acompanhamento">
-                    
-                    <div class="conteudo_tab_inside">
-
-                        <div class="lista">
-
-                            <ul>
-                                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Teste</span> <span class="valor uk-align-right">R$ 35,00</span></li>
-                                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Teste</span> <span class="valor uk-align-right">R$ 40,00</span></li>    <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Teste</span> <span class="valor uk-align-right">R$ 50,00</span></li>
-                                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Teste</span> <span class="valor uk-align-right">R$ 42,00</span></li>
-                                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Teste</span> <span class="valor uk-align-right">R$ 35,00</span></li>
-                                <li><i class="uk-icon-info-circle cinza"></i> <span class="nome_produto">Teste</span> <span class="valor uk-align-right">R$ 40,00</span></li>              
-                            </ul>
-
-                        </div>
-
-                    </div>
-                    
-                </ion-tab>
-                
-            </ion-tabs>    
--->
-
-<!--
-        </ion-slide>
-        
-    </ion-slide-box>
--->
-    
-<!--</div>-->
-    
-      
-      
-
 
 <style type="text/css">
 
-/*
-.scroll { 
-min-width: 100%;
-}    
-*/
+    .barra_vermelha {
+        background:#fc3f1e;
+        width: 100%;
+        height: 13px;
+    }
 
+.item.item-stable {
+    border-color: #b2b2b2;
+    background-color: #f8f8f8;
+    color: #444;
+    height: 38px;
+}
+    
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+    
+    
 .box1, .box2, .box3 {
-height: 130px;
+    height: 130px;
 }
 
 .lista ul li {
@@ -262,14 +168,14 @@ height: 130px;
 .boxmapa {
     background: #D2D2D2;
     text-align: center;
-    height: 100%;
+    height: 222px;
     position: relative;
     display: block;
 }
     
 .btn-mapa {
-position: relative;
-bottom: -180px;
+    position: relative;
+    bottom: -160px;
 }
     
 .botao {
@@ -282,23 +188,23 @@ bottom: -180px;
 }
 
 .cinza {
-color: #C7C7C7 !important;
-font-size: 25px;
-vertical-align: -3px;
-margin-right: 5px;
+    color: #C7C7C7 !important;
+    font-size: 25px;
+    vertical-align: -3px;
+    margin-right: 5px;
 }
     
 .icon-big {
-font-size: 25px;
-vertical-align: -3px;
-margin-right: 5px;
+    font-size: 25px;
+    vertical-align: -3px;
+    margin-right: 5px;
 }
     
 .valor {
-margin: 0px !important;
-padding: 0px !important;
-display: block;
-margin-top: 3px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    display: block;
+    margin-top: 3px !important;
 }
 
 .fonte-cinza {
@@ -309,10 +215,12 @@ margin-top: 3px !important;
 .fonte-vermelha {
     font-size: 15px;
     color: #fc3f1e;
+    padding-top: 47px;
+    
 }
     
 .ng-animate .scroll-bar {
-visibility: hidden;
+    visibility: hidden;
 }
     
 .tab_interna {
