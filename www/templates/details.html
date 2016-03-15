@@ -1,6 +1,6 @@
 <ion-view title="{{bar.bar_nome}}">
 
-    <ion-content>
+    <ion-content scroll="false">
         
         <div class="bannertop">
             
@@ -14,11 +14,8 @@
                 </ion-slide>
 
                 <ion-slide class="slidewidth">
-                    <div style="background-image:url(img/banner_ex.jpg); background-size:cover; background-position:center center;" class = "box box1">
-                        <div style="background-image:url(img/filtro.png); background-size:cover; background-position:center center; height:130px;">
-                            <div>
-                                Bla
-                            </div>
+                    <div style="background-image:url(img/filtro.png); background-size:cover; background-position:center center;">
+                        <div style="background-image:url(img/banner_exx.jpg); background-size:cover; background-position:center center;" class = "box box1">
                         </div>
                     </div>
                 </ion-slide>
@@ -39,7 +36,7 @@
             <div class="tabss">
                 
             
-                <ion-tabs class="tabs-positive tabs-icon-only"s>
+                <ion-tabs class="tabs-icon-only tabs-positive">
                                 
                     <ion-tab title="Sobre">
                              <ion-content class="background">
@@ -89,12 +86,12 @@
                                <ion-list>
                                    <div ng-repeat="group in itens">
                                        <ion-item class="item-stable" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
-                                           <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;
+                                           <i class="icon" style="color: #fc3f1e;" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;
                                            {{group.Nome}}
                                        </ion-item>
-                                       <ion-item class="item-accordion" ng-repeat="item in group.Receitas" ng-show="isGroupShown(group)">
+                                       <ion-item class="item-accordion" ng-repeat="item in group.Receitas" ng-show="isGroupShown(group)" style="color: #9E0C0C;background-color: #F7F7F7;">
                                            <div class="list_pratos">
-                                            {{item.Nome}} - R${{item.Preco}}
+                                            &nbsp;{{item.Nome}} - R${{item.Preco}}
                                            </div>
                                            
                                        </ion-item>
@@ -136,7 +133,7 @@
 .item.item-stable {
     border-color: #b2b2b2;
     background-color: #f8f8f8;
-    color: #444;
+    color: #fc3f1e;
     height: 38px;
 }
     

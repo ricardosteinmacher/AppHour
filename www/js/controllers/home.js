@@ -14,7 +14,7 @@ angular.module('AppHour')
         
     $scope.doRefresh = function() {
         $rootScope.bares = null;
-        navigator.geolocation.getCurrentPosition(function(pos) {
+       // navigator.geolocation.getCurrentPosition(function(pos) {
 
 //            if(navigator.connection) {
 //                console.log("entrou: " + navigator.connection);
@@ -30,7 +30,8 @@ angular.module('AppHour')
 //                });
 //              }
 //            else {
-                web_services.lista_bares(pos.coords.latitude, pos.coords.longitude).then(function(result) {
+             //   web_services.lista_bares(pos.coords.latitude, pos.coords.longitude).then(function(result) {
+                web_services.lista_bares(0, 0).then(function(result) {
                     console.log("com internet");
                     DB_local.saveHome();
                     $ionicSlideBoxDelegate.update();
@@ -39,7 +40,7 @@ angular.module('AppHour')
                 
             $scope.$broadcast('scroll.refreshComplete');
             
-      });
+      //});
     }
     
     $scope.openDetail = function(Obj){

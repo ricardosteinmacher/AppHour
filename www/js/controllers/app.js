@@ -41,8 +41,7 @@ angular.module('AppHour')
 //      $scope.closeLogin();
 //    }, 1000);
 //  };
-    
-
+  
   $scope.ConfirmLogOut = function() {
       
      var confirmPopup = $ionicPopup.confirm({

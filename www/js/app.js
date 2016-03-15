@@ -53,7 +53,9 @@ angular.module('AppHour', ['ionic', 'ngCordova'])
    $rootScope.bares = null;
 })
 
-.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+.config(function($stateProvider, $urlRouterProvider, $httpProvider, $ionicConfigProvider) {
+    
+    $ionicConfigProvider.tabs.position('bottom');
     
     //Modificações para a chamada de WS funcionar
     $httpProvider.defaults.useXDomain = true;
