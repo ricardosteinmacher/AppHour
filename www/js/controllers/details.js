@@ -15,7 +15,7 @@ angular.module('AppHour')
          },
          
          {Nome:'Carnes e Peixes',Receitas:[
-             {Nome:'Mignon', Preco: '39,99'},
+             {Nome:'Mignon jhasdb adg adjg askjdg askdjga ksdjhas dlasd kadv jaksd asdy', Preco: '39,99'},
              {Nome:'Picanha', Preco: '59,99'},
              {Nome:'Entrecot', Preco: '49,99'},
              {Nome:'Tilápia', Preco: '29,99'},
