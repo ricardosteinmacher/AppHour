@@ -57,12 +57,12 @@
                                    </li>
                                    <li content="telephone=no">
                                        <img src="img/ico_fone.png" style="height: 26px;"/>
-                                       <meta name="format-detection" content="telephone=no">                    {{bar.bar_telefone2}}
+                                       <meta name="format-detection" content="telephone=no">                    {{bar.bar_telefone2}} shdakjsdhsakjd
                                         </meta>
                                    </li>
                                    <li>
                                        <img src="img/ico_talher.png" style="height: 26px;"/>
-                                       {{bar.bar_telefone2}}
+                                       {{bar.bar_telefone2}} shdakjsdhsakjdshdakjsdhsakjd
                                    </li>
                                </ul>
                            </div>
@@ -82,16 +82,17 @@
     
                     <ion-tab title="Cardápio">
                         <ion-content class="background">
-                           <div class="conteudo"> 
+                           <div class="conteudo-cardapio"> 
                                <ion-list>
                                    <div ng-repeat="group in itens">
                                        <ion-item class="item-stable" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
-                                           <i class="icon" style="color: #fc3f1e;" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;
+<!--                                           <i class="icon" style="color: #fc3f1e;" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>&nbsp;-->
                                            {{group.Nome}}
                                        </ion-item>
                                        <ion-item class="item-accordion" ng-repeat="item in group.Receitas" ng-show="isGroupShown(group)" style="color: #9E0C0C;background-color: #F7F7F7;">
                                            <div class="list_pratos">
-                                            &nbsp;{{item.Nome}} - R${{item.Preco}}
+<!--                                           {{item.Nome}} R${{item.Preco}}-->
+                                               <div class="borderline"><div class="nomedoitem">{{item.Nome}}</div> <div class="precodoitem">R${{item.Preco}}</div></div>
                                            </div>
                                            
                                        </ion-item>
@@ -124,33 +125,70 @@
 
 <style type="text/css">
 
-    .barra_vermelha {
-        background:#fc3f1e;
-        width: 100%;
-        height: 13px;
-    }
-
-.item.item-stable {
-    border-color: #b2b2b2;
-    background-color: #f8f8f8;
-    color: #fc3f1e;
-    height: 38px;
+.barra_vermelha {
+background:#fc3f1e;
+width: 100%;
+height: 13px;
 }
     
-.list .item.item-accordion {
-  line-height: 38px;
-  padding-top: 0;
-  padding-bottom: 0;
-  transition: 0.09s all linear;
+ion-item.item-stable.item.ng-binding.active {
+    margin-bottom: 6px;
 }
+    
+.borderline {
+    padding: 0px 15px;
+}
+    
+.nomedoitem.ng-binding {
+    width: 50%;
+    float: left;
+    display: inline-block;
+    border-bottom: 1px solid #D8D8D8;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #666666;
+    text-align:left;
+}
+    
+.precodoitem.ng-binding {
+    width: 50%;
+    float: left;
+    display: inline-block;
+    border-bottom: 1px solid #D8D8D8;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #666666;
+    text-align: right;
+}
+
+.item.item-stable {
+    color: #FC3F1E;
+    padding: 15px 12px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid rgba(252, 63, 30, 0.22);
+}
+    
+.list_pratos.ng-binding span {
+    border-bottom: 1px solid #E4E4E4;
+    padding: 8px 15px;
+}
+    
+.list .item.item-accordion span {
+    transition: 0.09s all linear;
+    padding: 4px 11px;
+    color: #6b6b6b !important;
+    font-size: 14px;
+    background-color: #f7f7f7 !important;
+}
+    
 .list .item.item-accordion.ng-hide {
   line-height: 0px;
 }
-.list .item.item-accordion.ng-hide-add,
-.list .item.item-accordion.ng-hide-remove {
+    
+.list .item.item-accordion.ng-hide-add, .list .item.item-accordion.ng-hide-remove {
   display: block !important;
 }
-    
+
     
 .box1, .box2, .box3 {
     height: 130px;

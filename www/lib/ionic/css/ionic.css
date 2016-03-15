@@ -5799,14 +5799,10 @@ ion-tabs.tabs-color-active-dark .tab-item {
     .item .item-content.activated.item-light.item-complex > .item-content {
       border-color: #ccc;
       background-color: #fafafa; }
-  .item.active.item-stable,
-  .item.activated.item-stable,
-  .item-complex.active .item-content.item-stable,
-  .item-complex.activated .item-content.item-stable,
-  .item .item-content.active.item-stable,
-  .item .item-content.activated.item-stable {
-    border-color: #a2a2a2;
-    background-color: #e5e5e5; }
+.item .item-content.activated.item-stable, .item .item-content.active.item-stable, .item-complex.activated .item-content.item-stable, .item-complex.active .item-content.item-stable, .item.activated.item-stable, .item.active.item-stable {
+    border-color: #F9CFC7;
+    background-color: #f7f7f7;
+}
     .item.active.item-stable.item-complex > .item-content,
     .item.activated.item-stable.item-complex > .item-content,
     .item-complex.active .item-content.item-stable.item-complex > .item-content,

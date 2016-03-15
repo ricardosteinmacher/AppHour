@@ -51,3 +51,14 @@
 .has-tabs, .bar-footer.has-tabs {
     bottom: 0px !important;
 }
+
+li.ng-binding img {
+    vertical-align: -7px;
+    margin-right: 8px;
+    width: 23px;
+    height: 23px !important;
+}
+
+.conteudo-cardapio {
+    margin-top: 47px;
+}
