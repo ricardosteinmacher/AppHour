@@ -16,25 +16,30 @@
     <ion-header-bar class="bar-stable">
       <h1 class="title">Menu</h1>
     </ion-header-bar>
-    <ion-content edge-drag-threshold="false" drag-content="true">
+    <ion-content edge-drag-threshold="false" drag-content="true" style="background-color: #f7f7f7;">
         <div class="menu_lateral">
-            <ion-list>
-                <ion-item menu-close ui-sref="app.home">
-                    Home
-                </ion-item>
-                <ion-item menu-close ui-sref="app.maps">
-                    Mapa
-                </ion-item>
-                <ion-item menu-close ng-click="ConfirmLogOut()" style="margin-left: 16px;padding-top: 15px;">
-                    Log Out
-                </ion-item>
-            </ion-list>
-            
+            <div class="menu_btn">
+                <div style="margin-top: 16px;" menu-close ui-sref="app.home">
+                    <img src="img/ico_relogio.png" style="height: 30px;left: 0px;"/>
+                    <i class="config_btn_text" style="margin-left: 3px; background-size:cover; background-position:center center;font-size: 18px">Home</i>
+                </div>
+                <div style="margin-top: 16px;" menu-close ui-sref="app.maps">
+                    <img src="img/ico_relogio.png" style="height: 30px;left: 0px;"/>
+                    <i class="menu_btn_text" style="margin-left: 3px; background-size:cover; background-position:center center;font-size: 18px">Mapa</i>
+                </div>
+                <div style="margin-top: 16px;" ng-click="compartilhar()">
+                    <img src="img/ico_relogio.png" style="height: 30px;left: 0px;"/>
+                    <i class="menu_btn_text" style="margin-left: 3px; background-size:cover; background-position:center center;font-size: 18px">Compartilhar</i>
+                </div>
+                <div style="margin-top: 16px;" menu-close ui-sref="app.home">
+                    <img src="img/ico_relogio.png" style="height: 30px;left: 0px;"/>
+                    <i class="menu_btn_text" style="margin-left: 3px; background-size:cover; background-position:center center;font-size: 18px">Nosso Site</i>
+                </div>
+            </div>
             <div class="config_btn">
                 <img src="img/ico_relogio.png" style="height: 26px;left: 0px;"/>
-                <i class="config_btn_text" style="margin-left: 3px;">Configurações</i>
+                <i class="menu_btn_text" style="margin-left: 3px; background-size:cover; background-position:center center;font-size: 15px">Configurações</i>
             </div>
-            
         </div>
     </ion-content>
   </ion-side-menu>
@@ -44,9 +49,21 @@
 .config_btn {
     position: absolute;
     bottom: 17px;
-    left: 25px;
+    padding-left: 25px;
+    width: 100%;
 }
+    
 .config_btn img {
+    vertical-align: -7px;
+}
+    
+.menu_btn {
+    position: absolute;
+    top: 17px;
+    padding-left: 25px;
+    width: 100%;
+}
+.menu_btn img {
     vertical-align: -7px;
 }
 </style>

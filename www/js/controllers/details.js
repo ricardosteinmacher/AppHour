@@ -15,7 +15,7 @@ angular.module('AppHour')
          },
          
          {Nome:'Carnes e Peixes',Receitas:[
-             {Nome:'Mignon jhasdb adg adjg askjdg askdjga ksdjhas dlasd kadv jaksd asdy', Preco: '39,99'},
+             {Nome:'Mignon Mignon Mignon Mignon Mignon Mignon Mignon Mignon Mignon Mignon ', Preco: '39,99'},
              {Nome:'Picanha', Preco: '59,99'},
              {Nome:'Entrecot', Preco: '49,99'},
              {Nome:'Tilápia', Preco: '29,99'},
@@ -33,9 +33,25 @@ angular.module('AppHour')
              {Nome:'Cupcake', Preco: '4,99'},
              {Nome:'Gelatina', Preco: '2,99'},
              {Nome:'Suflê Doce', Preco: '9,99'},
+             {Nome:'Brigadeiros', Preco: '4,99'},
+             {Nome:'Cupcake', Preco: '4,99'},
+             {Nome:'Gelatina', Preco: '2,99'},
+             {Nome:'Suflê Doce', Preco: '9,99'},
+             {Nome:'Brigadeiros', Preco: '4,99'},
+             {Nome:'Cupcake', Preco: '4,99'},
+             {Nome:'Gelatina', Preco: '2,99'},
+             {Nome:'Suflê Doce', Preco: '9,99'},
              {Nome:'Rocambole', Preco: '19,99'}]
          },
          {Nome:'Bebidas',Receitas:[
+             {Nome:'Cerveja 1', Preco: '4,99'},
+             {Nome:'Cerveja 2', Preco: '5,99'},
+             {Nome:'Cerveja 3', Preco: '6,99'},
+             {Nome:'Cerveja 4', Preco: '7,99'},
+             {Nome:'Cerveja 5', Preco: '8,99'},
+             {Nome:'Coca-cola', Preco: '3,99'},
+             {Nome:'Guaraná', Preco: '3,99'},
+             {Nome:'Água', Preco: '2,99'},
              {Nome:'Cerveja 1', Preco: '4,99'},
              {Nome:'Cerveja 2', Preco: '5,99'},
              {Nome:'Cerveja 3', Preco: '6,99'},
@@ -66,13 +82,14 @@ angular.module('AppHour')
   $scope.toggleGroup = function(group) {
       if ($scope.isGroupShown(group)) {
           $scope.shownGroup = null;
-          $ionicScrollDelegate.resize();
+          $ionicScrollDelegate.$getByHandle('mainScroll').resize();
       } else {
           $scope.shownGroup = group;
-          $ionicScrollDelegate.resize();
+          $ionicScrollDelegate.$getByHandle('mainScroll').resize();
       }
   }
   $scope.isGroupShown = function(group) {
+      $ionicScrollDelegate.resize();
       return $scope.shownGroup === group;
   }
   
@@ -80,10 +97,10 @@ angular.module('AppHour')
       console.log("chamou");
       launchnavigator.navigate( [-25.451400, -49.289167], null,
         function(){
-          alert("Plugin success");
+          //alert("Plugin success");
         },
         function(error){
-          alert("Plugin error: "+ error);
+          //alert("Plugin error: "+ error);
         });
   }
     

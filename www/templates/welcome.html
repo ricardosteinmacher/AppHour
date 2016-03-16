@@ -1,11 +1,10 @@
 <ion-view class="background_welcomee">
-  <ion-content style="padding:0px 20px;" scroll="false">
-         <div class="botoeslogin">
-        <button class="button button-block" ui-sref="app.home">Sem Login</button>
-        <a class="facebook-sign-in button button-block" ng-click="facebookSignIn()">Login with Facebook</a>
-        <a class="google-sign-in button button-block" ng-click="login()">Sign in with Google</a>
-        
-    </div>
+  <ion-content scroll="false">
+        <div class="botoeslogin">
+            <button class="button button-block" ui-sref="app.home">Sem Login</button>
+            <a class="facebook-sign-in button button-block" ng-click="facebookSignIn()">Login with Facebook</a>
+            <a class="google-sign-in button button-block" ng-click="login()">Sign in with Google</a>
+        </div>
       
    </ion-content>
 </ion-view>
@@ -21,7 +20,10 @@
 }
     
 .botoeslogin {
-padding-top: 385px;
+    width: 100%;
+    position: absolute;
+    bottom: 13px;
+    padding: 0px 13px 0px 13px;
 }
 
 </style>

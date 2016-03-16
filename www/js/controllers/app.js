@@ -2,7 +2,7 @@
 
 angular.module('AppHour')
 
-.controller('AppCtrl', function($scope, $ionicModal, $state, $ionicPopup, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $state, $ionicPopup, $timeout, $ionicActionSheet, $cordovaSocialSharing) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -57,5 +57,66 @@ angular.module('AppHour')
        //Não
      }
    });
-  };  
+  };
+    
+  // Triggered on a button click, or some other target
+ $scope.compartilhar = function() {
+   // Show the action sheet
+   var hideSheet = $ionicActionSheet.show({
+     buttons: [
+       { text: 'Facebook' },
+       { text: 'WhatsApp' },
+       { text: 'Twitter' }
+     ],
+     destructiveText: '',
+     titleText: 'Compartilhar',
+     cancelText: 'Cancelar',
+     cancel: function() {
+          // add cancel code..
+        },
+     buttonClicked: function(index) {
+         
+         switch(index) {
+                case 0:
+                    console.log("Facebook");
+                    $cordovaSocialSharing
+                        .shareViaFacebook("Teste do Facebook", '', "https://www.facebook.com/AppHourBar/")
+                    .then(function(result) {
+
+                    }, function(err) {
+              
+                    });
+                break;
+                case 1:
+                    console.log("Whatsapp");
+                    $cordovaSocialSharing
+                        .shareViaWhatsApp("Teste do Whatsapp", '', '')
+                    .then(function(result) {
+
+                    }, function(err) {
+    
+                    });
+                break;
+                case 2:
+                    console.log("Twitter");
+                    $cordovaSocialSharing
+                        .shareViaTwitter("Teste do Twitter", '', '')
+                    .then(function(result) {
+
+                    }, function(err) {
+                        
+                    });
+                break;
+                default: 
+         }
+                   
+       return true;
+     }
+   });
+
+   // For example's sake, hide the sheet after two seconds
+   $timeout(function() {
+     hideSheet();
+   }, 10000);
+ };  
 });

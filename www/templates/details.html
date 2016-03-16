@@ -82,7 +82,7 @@
                     
     
                     <ion-tab title="Cardápio">
-                        <ion-content class="background">
+                        <ion-content class="background" delegate-handle="mainScroll">
                            <div class="conteudo-cardapio"> 
                                <ion-list>
                                    <div ng-repeat="group in itens">
@@ -92,15 +92,13 @@
                                        </ion-item>
                                        <ion-item class="item-accordion" ng-repeat="item in group.Receitas" ng-show="isGroupShown(group)" style="color: #9E0C0C;background-color: #F7F7F7;">
                                            <div class="list_pratos">
-<!--                                           {{item.Nome}} R${{item.Preco}}-->
                                                <div class="borderline">
                                                    <div class="borda">
                                                    <div class="nomedoitem">{{item.Nome}}</div>
                                                    <div class="precodoitem">R${{item.Preco}}</div>
                                                    </div>
                                                </div>
-                                           </div>
-                                           
+                                           </div>  
                                        </ion-item>
                                    </div>
                                </ion-list>
