@@ -59,9 +59,12 @@ angular.module('AppHour')
    });
   };
     
-  // Triggered on a button click, or some other target
+  $scope.openInExternalBrowser = function()
+  {
+     window.open('http://google.com','_system');  
+  };
+
  $scope.compartilhar = function() {
-   // Show the action sheet
    var hideSheet = $ionicActionSheet.show({
      buttons: [
        { text: 'Facebook' },
